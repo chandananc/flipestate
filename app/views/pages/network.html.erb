@@ -1,0 +1,226 @@
+<div class="jumbotron">
+  <style>
+  
+h1 {color:red;}
+p {color:white;}
+</style><h1 align="left">Get Connected!</h1><br>
+  <p align="left">Come and join our community. Expand your network and get to know new people!</p>
+  <%= link_to "Register Account", new_user_registration_path, class: "btn btn-success btn-lg" %>
+</div>
+
+
+
+
+<div class="container" >
+  <form class="form-inline">  
+    
+<%= form_for(resource, as: resource_name, url: user_registration_path(resource_name)) do |f| %>
+
+  <div class="form-group">
+      <input <%= f.text_field :username, autofocus: true,id: "exampleInputName2", placeholder: "Username" %> &nbsp;  
+    </div>
+                                 
+    <div class="form-group">
+     <input <%= f.password_field :password, autocomplete: "off", id: "exampleInputName2", placeholder: "Password" %> 
+    </div>
+        <%= f.submit "Sign Up", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+     </div>
+    </form>
+
+<%= link_to "signout", destroy_user_session_path,class: "btn btn-primary", method: :delete %>
+</div>
+
+<% @users.each do |user| %>
+    <%= user.name %>
+    <%= image_tag @users.image.url %>
+  
+<% end %>
+<br>
+
+
+
+<br>
+
+<div class="row" style="background-color:#eeeeee">
+    <div class="container">
+    <div class="col-md-6">
+      <li role="presentation" class="active"><a href="#joms-app--653" aria-controls="home" role="tab" data-toggle="tab">Members</a></li>
+      <li role="presentation"><a href="#joms-app--658" aria-controls="profile" role="tab" data-toggle="tab">Whos Online</a></li>
+     
+</div>
+        
+        <br>
+        <div id="joms-app--653" class="joms-tab__content">
+            <div class="joms-module"><div class="joms-js--member-module">
+                <div id="latest-members-nav" class="joms-module__filter joms-text--small" style="position:relative;">
+                    <a class="newest-member active-state" href="javascript:">Newest</a><b>&nbsp;·</b> <a class="featured-member" href="javascript:">Featured</a><b>&nbsp;·</b> <a class="active-member" href="javascript:">Active</a><b>&nbsp;·</b> <a class="popular-member" href="javascript:">Popular</a>        <div class="joms-js--loading" style="position: absolute; right: 0px; top: 0px; display: none;"><img src="/flipestate/components/com_community/assets/ajax-loader.gif" alt="loader"></div>
+                </div>
+                  <br>
+                <div class="joms-gap"></div>
+                    <ul class="joms-list--thumbnail clearfix">
+                    <li class="joms-list__item">
+                        <div class="joms-avatar">
+                            <a href="/flipestate/index.php/network/253-super-user/profile">
+                                <img data-author="253" alt="Super User" title="Super User" src="http://theproshow.ca/flipestate/components/com_community/assets/user-Male-thumb.png">
+                                <img data-author="678" alt="sam" title="sam" src="http://theproshow.ca/flipestate/images/avatar/thumb_01562ccaede5526dd94f196c.png">
+                            </a>
+                        </div>
+                    </li>
+                    </ul>
+                    <div class="joms-gap"></div>
+                        <a href="/flipestate/index.php/network/search/browse" class="joms-button--link">
+                            <small>  View All Members        (2)    </small>
+                        </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+      <div class="joms-stream joms-js--stream joms-js--stream-2" data-stream-id="2" data-stream-type="videos.linking">
+        <div class="joms-stream__header">
+            <div class="joms-avatar--stream">
+                <a href="/flipestate/index.php/network/678-sam/profile">
+                    <img data-author="678" src="http://theproshow.ca/flipestate/images/avatar/thumb_01562ccaede5526dd94f196c.png" alt="sam">
+                </a>
+            </div>
+            <div class="joms-stream__meta">
+                <a href="/flipestate/index.php/network/678-sam/profile" class="joms-stream__user">sam</a> added a <a href="/flipestate/index.php/network/678-sam/videos/video/1-https-youtube-com-devicesupport">video</a>.       
+                <span class="joms-stream__time">
+                    <small>  1 month ago             </small>
+                </span>
+            </div>
+            <div class="joms-list__options">
+                <ul class="joms-dropdown">    </ul>
+            </div>
+        </div>
+        <div class="joms-stream__body">
+             <div class="joms-media--video joms-js--video joms-js--initialized" data-type="youtube" data-id="GY0EZBtZFEM" data-path="https://youtu.be/GY0EZBtZFEM">
+                    <div class="joms-media__thumbnail">
+                        <img src="http://theproshow.ca/flipestate/images/videos/678/thumbs/EDqDMpZ7vMe.jpg" alt="https://youtube.com/devicesupport">
+                        <a href="javascript:" class="mejs-overlay mejs-layer mejs-overlay-play joms-js--video-play joms-js--video-play-2">
+                            <div class="mejs-overlay-button"></div>
+                        </a>
+                    </div>
+                    <div class="joms-media__body">
+                        <h4 class="joms-media__title">
+                            https://youtube.com/devicesupport   </h4>
+                        <p class="joms-media__desc">
+                            https://youtube.com/devicesupport http://m.youtube.com   </p>
+                    </div>
+              </div>
+        </div>
+     </div>
+  </div>
+  
+  <div class="row">
+  <div class="col-md-6">
+      <div class="joms-module__wrapper"><div class="joms-tab__bar">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#joms-app--653" aria-controls="home" role="tab" data-toggle="tab">Photos</a></li>
+            <li role="presentation"><a href="#joms-app--658" aria-controls="profile" role="tab" data-toggle="tab">Videos</a></li>
+            </ul>
+      </div> <br> 
+    <div id="joms-app--654" class="joms-tab__content">
+         <div class="joms-module">
+            <div class="joms-module__body">
+		       <div class="cEmpty">No public photos available</div>
+            </div><br> <br>
+            <div class="joms-module__footer">
+        	    <a class="joms-button--link" href="/flipestate/index.php/network/photos/display">View All Photos</a>
+            </div>
+        </div>       
+    </div>
+    <div id="joms-app--657" class="joms-tab__content" style="display:none">
+        <div class="joms-module">
+            <div class="joms-js--video-module">
+                <div id="latest-videos-nav" class="joms-module__filter joms-text--small" style="position:relative;">
+                    <a class="newest-videos active-state" href="javascript:">Newest</a><b>&nbsp;·</b>
+                    <a class="featured-videos" href="javascript:">Featured</a><b>&nbsp;·</b>
+                    <a class="popular-videos" href="javascript:">Popular</a>
+                <div class="joms-js--loading" style="position:absolute;right:0;top:0;display:none;"><img src="/flipestate/components/com_community/assets/ajax-loader.gif" alt="loader"></div>
+                </div>
+                <div class="joms-gap"></div>
+                    <ul class="joms-list--half clearfix">
+                    <li class="joms-list__item">
+                    <a href="/flipestate/index.php/network/678-sam/videos/video/1-https-youtube-com-devicesupport">
+                        <img src="http://theproshow.ca/flipestate/images/videos/678/thumbs/EDqDMpZ7vMe.jpg" alt="https://youtube.com/devicesupport" title="https://youtube.com/devicesupport">
+                        <span class="joms-video__duration"><small>03:56</small></span>
+                    </a>
+                    </li>
+                    </ul>
+               </div>
+            <div class="joms-gap"></div>
+                <a href="/flipestate/index.php/network/videos/display" class="joms-button--link">
+                    <small>View all videos</small>
+                </a>
+            </div>  
+        </div>
+    </div>
+  </div>
+  
+  <div class="col-md-6">
+     <div class="joms-stream joms-js--stream joms-js--stream-1" data-stream-id="1" data-stream-type="photos">
+        <div class="joms-stream__header">
+            <div class="joms-avatar--stream">
+                <a href="/flipestate/index.php/network/678-sam/profile">
+                    <img data-author="678" src="http://theproshow.ca/flipestate/images/avatar/thumb_01562ccaede5526dd94f196c.png" alt="sam">
+                </a>
+            </div>
+            <div class="joms-stream__meta">
+                <a class="joms-stream__user" href="/flipestate/index.php/network/678-sam/profile">sam</a>
+                    shared 16 photos in the <a href="javascript:" onclick="joms.api.photoOpen('2', '');" "=">sample 1</a> album
+                <span class="joms-stream__time">
+                    <small>1 month ago </small>
+                </span>
+            </div>
+        </div>
+    <div class="joms-stream__body">
+        <p><span class="joms-js--stream-text-1"></span></p>
+         <div class="joms-media--images joms-js--initialized">
+                    <a href="javascript:" onclick="joms.api.photoOpen('2', '17');" style="display: block; float: left; margin: 1px 0px; overflow: hidden; padding: 0px; position: relative;">
+                <img src="http://theproshow.ca/flipestate/images/photos/678/2/efb938fad8af23f6f2cb17cd.jpg" alt="" style="display: inline; height: 114.626701712669px;">
+            </a>
+                    <a href="javascript:" onclick="joms.api.photoOpen('2', '2');" style="display: block; float: left; margin: 1px 0px; overflow: hidden; padding: 0px; position: relative;">
+                <img src="http://theproshow.ca/flipestate/images/photos/678/2/65b0c9d58d3385bd0d235db5.jpg" alt="" style="display: inline; height: 114.626701712669px;">
+            </a>
+                    <a href="javascript:" onclick="joms.api.photoOpen('2', '3');" style="display: block; float: left; margin: 1px 0px; overflow: hidden; padding: 0px; position: relative;">
+                <img src="http://theproshow.ca/flipestate/images/photos/678/2/2c3b40594dabfef60d093b67.jpg" alt="" style="display: inline; height: 114.626701712669px;">
+            </a>
+                    <a href="javascript:" onclick="joms.api.photoOpen('2', '4');" style="display: block; float: left; margin: 1px 0px; overflow: hidden; padding: 0px; position: relative;">
+                <img src="http://theproshow.ca/flipestate/images/photos/678/2/c9fc3e50c4260e177d962112.jpg" alt="" style="display: inline; height: 135.771428571429px;">
+            </a>
+                    <a href="javascript:" onclick="joms.api.photoOpen('2', '5');" style="display: block; float: left; margin: 1px 0px; overflow: hidden; padding: 0px; position: relative;">
+                <img src="http://theproshow.ca/flipestate/images/photos/678/2/907e65ef36728dc185af7fc1.jpg" alt="" style="display: inline; height: 135.771428571429px;">
+            </a>
+        </div>
+    </div>
+    </div>         
+</div>
+  </div>
+   <div class="row">
+  <div class="col-md-6">
+      <div class="joms-module__wrapper"><div class="joms-tab__bar">
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#joms-app--651" aria-controls="home" role="tab" data-toggle="tab">Events</a></li>
+            <li role="presentation"><a href="#joms-app--652" aria-controls="profile" role="tab" data-toggle="tab">Groups</a></li>
+          </ul> <br>
+            <div id="joms-app--651" class="joms-tab__content">
+            <div class="joms-module">
+                <div class="cEmpty">Sorry, we currently have no events.</div> <br> <br>
+                <a class="joms-button--link" href="/flipestate/index.php/network/events">View All Events</a>
+            </div>
+            </div>
+            <div id="joms-app--652" class="joms-tab__content" style="display:none">
+            <div class="joms-module">
+            <div class="cEmpty">No groups created yet</div>
+            <div class="joms-gap"></div>
+                <a href="/flipestate/index.php/network/groups" class="joms-button--link"><small>View all groups</small></a>
+            </div>  
+            </div>
+            </div>
+    </div>
+    </div>
+    </div>

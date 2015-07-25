@@ -1,0 +1,66 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <h4> Reviews </h4> <br>
+<div class="box_comment">
+    <div class="user_name">admin</div>
+    <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top"  style=" width: 1000px">
+
+        <span class="arrow_up_comment"></span>
+            <div class="head_comment">
+                <div class="title_rating">
+                    <h4 class="col_title_rev">Really wonderful stay
+                            <img src="../assets/star-on.png" alt="4.5" border="0" align="right">
+                            <img src="../assets/star-on.png" alt="4.5" border="0" align="right">
+                            <img src="../assets/star-on.png" alt="4.5" border="0" align="right">
+                            <img src="../assets/star-on.png" alt="4.5" border="0" align="right">
+                            <img src="../assets/star-half.png" alt="4.5" border="0" align="right">
+                      </h4>
+                        
+                      
+                  </div>
+                 <div class="row_comment">
+                    The house had plenty of space for our family, a fully equipped kitchen, a charming pool and of course a magnificent view. I would recommend this house to any family that is searching for a nice home.                            </div>
+                <div class="date">
+                  <span class="date_format">
+                    2014-12-15 15:59:18 
+                  </span>
+                </div>
+            </div>
+          </button>
+</div>
+
+
+
+<%= form_for(@review) do |f| %>
+  <% if @review.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+      <ul>
+      <% @review.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :rating %><br>
+    <%= f.number_field :rating, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.submit  class: "btn btn-primary" %>
+  </div>
+<% end %>
+</div>

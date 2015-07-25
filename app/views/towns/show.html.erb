@@ -1,0 +1,100 @@
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+
+
+
+<br>
+<br>
+
+<% @town_attachments.each do |p| %>
+  <%= image_tag p.image_url %>
+  
+<% end %>
+
+<div id="rem_house_property">
+  <div class="row_text">
+      <span class="col_text_1">Listing status:</span>
+      <span class="col_text_2">Active</span>
+
+                        
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+     <span >Property type:</span>
+     <span >Single family</span>
+
+                
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+     <span class="col_text_3">Property ID:</span>
+     <span class="col_text_4">2</span>
+  </div>
+  
+  <br>
+  
+  <div class="row_text">
+      <span class="col_text_icon"></span>
+      <span class="col_01">Listing type:</span>
+      <span class="col_02">House for rent</span>
+  </div>
+                                    <!--add edocument -->
+ </div>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @town.name %>
+</p>
+
+<p>
+  <strong>Sqft:</strong>
+  <%= @town.sqft %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @town.rooms %>
+</p>
+
+<p>
+  <strong>Buit year:</strong>
+  <%= @town.buit_year %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @town.cost %>
+</p>
+
+
+
+
+
+<p>
+  <strong>Address:</strong>
+  <%= @town.address %>
+</p>
+ 
+<br> <br>
+
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Description", pages_description_path %>
+  </li>
+   <li class="active">
+    <%= link_to "Location", pages_location_path %>
+  </li>
+  <li class="active">
+    <%= link_to "Reviews", new_review_path %>
+  </li>
+</ul>
+
+<br> <br>
+
+
+
+<%= link_to 'Edit', edit_town_path(@town) %> |
+<%= link_to 'Back', towns_path %>
+
+<%= link_to "Revies", new_review_path %>
+
+</div>

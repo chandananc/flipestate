@@ -1,0 +1,112 @@
+<div class="jumbotron">
+ <style>
+    h1 {color:red;}
+    p {color:white;}
+ </style><h1 align="left">Get Connected!</h1><br>
+  <p align="left">Come and join our community. Expand your network and get to know new people!</p>
+  <%= link_to "Register Account", new_user_registration_path, class: "btn btn-success btn-lg" %>
+</div>
+
+<div class="container" >
+  <form class="form-inline">  
+    <%= form_for(resource, as: resource_name, url: user_registration_path(resource_name)) do |f| %>
+
+  <div class="form-group">
+      <input <%= f.text_field :username, autofocus: true,id: "exampleInputName2", placeholder: "Username" %> &nbsp;  
+    </div>
+                                 
+    <div class="form-group">
+     <input <%= f.password_field :password, autocomplete: "off", id: "exampleInputName2", placeholder: "Password" %> 
+    </div>
+        <%= f.submit "Sign Up", class: "btn btn-primary" %>
+    <% end %>
+    </div>
+     </div>
+    </form>
+    <%= link_to "signout", destroy_user_session_path,class: "btn btn-primary", method: :delete %>
+</div>
+
+
+<br>
+<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row" style="background-color:#eeeeee">
+   <div class="col-md-6">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#Members">Members </a></li>
+            <li><a data-toggle="tab" href="#Whose">Whose Online</a></li>
+           </ul>
+          <div class="tab-content">
+            <div id="Members" class="tab-pane fade in active">
+              <% @users.each do |user| %>
+              <%= image_tag user.image.url, :width => 50, :height => 50, style: "border-radius: 25px" %>
+              <% end %>   
+            </div>
+            <div id="Whose" class="tab-pane fade">
+                No one available at the moment.
+            </div>
+           </div>
+   </div> 
+   <div class="col-md-6">
+     <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#Super">Super User</a></li>
+     </ul>
+      <div class="tab-content">
+        <div id="Super" class="tab-pane fade in active">
+           
+           
+              
+               no photos found
+         </div>
+     </div>
+   </div>
+  </div> <br> <br> <br>
+  <div class="row" style="background-color:#eeeeee">
+    <div class="col-md-6">
+     <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#Photos">Photos</a></li>
+        <li><a data-toggle="tab" href="#Videos">Videos</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="Photos" class="tab-pane fade in active">
+               no photos found
+         </div>
+         <div id="Videos" class="tab-pane fade">
+              no videos found
+         </div>
+      </div>
+   </div>
+  </div> <br> <br> <br>
+  <div class="row" style="background-color:#eeeeee">
+    <div class="col-md-6">
+      <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#Events">Events</a></li>
+        <li><a data-toggle="tab" href="#Groups">Groups</a></li>
+      </ul>
+      <div class="tab-content">
+      <div id="Events" class="tab-pane fade in active">
+        no events found <br> <br> <br>
+        <%= link_to "View All Events", pages_events_path %>
+      </div>
+      <div id="Groups" class="tab-pane fade">
+         no groups found <br> <br> <br>
+         <%= link_to "View All Groups", pages_groups_path %>
+      </div>
+     </div>
+   </div>
+ </div>
+</div>
+    

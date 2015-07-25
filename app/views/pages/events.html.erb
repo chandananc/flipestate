@@ -1,0 +1,55 @@
+<ul class="nav nav-tabs">
+              <li >
+                <%= link_to "Events", pages_events_path %>
+              </li>
+               <li class="active" >
+                <%= link_to "Groups", pages_groups_path %>
+              </li>
+</ul>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Events</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#all">All Events</a></li>
+    <li><a data-toggle="tab" href="#past">Past events</a></li>
+    
+  </ul>
+<br>
+<br>
+  <div class="tab-content">
+    <div id="all" class="tab-pane fade in active">
+        <select>
+            <option value="">All Events</option>
+            <option value="2"> Birthday</option>
+            <option value="1"> General</option>
+            <option value="3"> Party</option>
+        </select> <br>
+        <br>
+    <p> no events found</p>
+    </div>
+    <div id="past" class="tab-pane fade">
+      
+      <p>no events found</p>
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

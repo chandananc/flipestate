@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @town_attachment.town_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @town_attachment.image %>
+</p>
+
+<%= link_to 'Edit', edit_town_attachment_path(@town_attachment) %> |
+<%= link_to 'Back', town_attachments_path %>

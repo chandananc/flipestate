@@ -1,0 +1,144 @@
+<br>
+<br>
+<br>
+<div id="rem_house_galery" width=300 >
+<div class="container">
+
+
+<p id="notice"><%= notice %></p>
+
+
+<% @list_attachments.each do |p| %>
+  <%= image_tag p.image_url %>
+ 
+<% end %>
+
+
+
+
+<br>
+<br><div id="rem_house_property">
+  <div class="row_text">
+      <span class="col_text_1">Listing status:</span>
+      <span class="col_text_2">Active</span>
+
+                        
+ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+     <span >Property type:</span>
+     <span >Single family</span>
+
+                
+   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+     <span class="col_text_3">Property ID:</span>
+     <span class="col_text_4">2</span>
+  </div>
+  
+  <br>
+  
+  <div class="row_text">
+      <span class="col_text_icon"></span>
+      <span class="col_01">Listing type:</span>
+      <span class="col_02">House for rent</span>
+  </div>
+                                    <!--add edocument -->
+ </div>
+<p>
+  <strong>Name:</strong>
+  <%= @list.name %>
+</p>
+
+<p>
+  <strong>Sqft:</strong>
+  <%= @list.sqft %>
+</p>
+
+<p>
+  <strong>Rooms:</strong>
+  <%= @list.rooms %>
+</p>
+
+<p>
+  <strong>Built year:</strong>
+  <%= @list.built_year %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @list.cost %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @list.address %>
+</p>
+
+
+
+<br> <br>
+
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Description", pages_description_path %>
+  </li>
+   <li class="active">
+    <%= link_to "Location", pages_location_path %>
+  </li>
+  <li class="active">
+    <%= link_to "Reviews", new_review_path %>
+  </li>
+</ul>
+
+
+
+
+
+
+<div class="rem_buying_house">
+                    
+                <div align="right">
+   
+         
+        <div id="rem_house_titlebox">
+        Send message    </div>
+    <div id="show_buying">
+        <form action="http://theproshow.ca/flipestate/index.php/real-estate/515/buying_request" method="post" name="buying_request">
+            <div class="table_08">
+          
+            <div class="row_01">
+              <div id="customer_name_warning"></div>
+                <span class="col_02"><input id="alert_name_buy" class="inputbox" type="text" name="customer_name" size="38" maxlength="80" placeholder="Name*" style="color: rgb(163, 163, 163); border-color: rgb(221, 221, 221);"></span>
+            </div>
+            <div class="row_02">
+              <div id="customer_email_warning"></div>
+                <span class="col_02"><input id="alert_mail_buy" class="inputbox" type="text" name="customer_email" size="38" maxlength="80" placeholder="Email*" style="color: rgb(163, 163, 163); border-color: rgb(221, 221, 221);"></span>
+            </div>
+
+                    <div class="row_05">
+              <div id="customer_phone_warning"></div>
+                <span class="col_02">
+                    <input class="inputbox" type="text" id="customer_phone" name="customer_phone" size="38" maxlength="80" placeholder="Phone" style="color: rgb(163, 163, 163); border-color: rgb(221, 221, 221);">
+                </span>
+            </div>
+            <div class="row_06">
+                <textarea name="customer_comment" cols="50" rows="8" placeholder="Description" style="color: rgb(163, 163, 163); border-color: rgb(221, 221, 221);"></textarea>        
+                <input type="hidden" name="bid[]" value="4">
+            </div>
+            <div class="row_07">
+                <span class="col_01">
+                    <input type="button" value="Send message" class="button" onclick="buying_request_submitbutton()">
+                </span> 
+            </div>
+         </div>
+        </form>
+    </div>
+            </div>            
+</div>
+<% if (user_signed_in?) && (current_user == list.user) %>
+    <%= link_to 'Edit', edit_list_path(@list) %> 
+    <% end %> |
+    <%= link_to 'Back', lists_path %>
+
+</div>
+</div>
+</div>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sqft: 1.5
+  rooms: 1
+  built_year: 1
+  cost: 9.99
+
+two:
+  name: MyString
+  sqft: 1.5
+  rooms: 1
+  built_year: 1
+  cost: 9.99

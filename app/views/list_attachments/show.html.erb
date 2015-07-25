@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>List:</strong>
+  <%= @list_attachment.list_id %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @list_attachment.image %>
+</p>
+
+<%= link_to 'Edit', edit_list_attachment_path(@list_attachment) %> |
+<%= link_to 'Back', list_attachments_path %>

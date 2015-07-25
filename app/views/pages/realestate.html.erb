@@ -1,0 +1,82 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <div class="componentheading">
+        <h4> Real estate </h4> </div>
+            <table class="basictable table_44" border="0" cellpadding="4" cellspacing="0" width="100%">
+            <tbody><tr>
+                        <td>
+                        <h5>   Our house catalogue with houses for sale and rent.  </h5>       </td>     
+                        <td width="120" align="center">
+                            <img src="../assets/estate.png" align="right" alt="Real Estate Manager logo">
+                        </td>
+                    </tr>
+        </tbody></table>
+        
+        <div class="componentheading">
+            <div class="realestate_search_button table_45">
+                <img align="right" src="http://theproshow.ca/flipestate/./components/com_realestatemanager/images/search.png" alt="Search" border="0">
+               <%= form_tag search_lists_path, method: :get do |f| %>
+                       <div >Search Houses</div>
+                       <%= text_field_tag :search, nil, placeholder: 'search' %>
+                       <%= submit_tag '>' %>
+                 <% end %>
+            </div>
+        </div>
+        
+        
+        
+        <form action="http://theproshow.ca/flipestate/index.php/real-estate" method="post" name="adminForm" id="adminForm">
+                
+                <br>
+                <div class="basictable table_58">
+                    <div class="row_01">
+                        <span class="col_01 sectiontableheader"> <b> Category   </b>       </span> &nbsp &nbsp
+                        <span class="col_02 sectiontableheader">  <b> # House     </b>     </span>
+                    </div>
+                    <br>
+                    <div class="row_02">
+                       <div class="table_59 sectiontableentry2">
+                            <span class="col_01"> </span>
+                            <span class="col_01">
+                                 <a class="category" style="text-decoration: none"><img src="../assets/address.png" alt="picture for subcategory" height="48" width="48"></a>&nbsp;
+                            </span>
+                            <span class="col_02">
+                                  <a href="https://flipestate-chandananc.c9.io/categories/2"> Cottage </a>
+                            </span>
+                            <span class="col_03"> 1                    </span>
+                        </div>
+                            <div class="table_59 sectiontableentry1">
+                                <span class="col_01"> </span>
+                                <span class="col_01">
+                                                        <a  class="category" style="text-decoration: none"><img src="../assets/address.png" alt="picture for subcategory" height="48" width="48"></a>&nbsp;
+                                                </span>
+                                <span class="col_02">
+                                       <a href="https://flipestate-chandananc.c9.io/categories/4"> Townhouse </a>
+                                <span class="col_03"> 1  </span>
+                            </div>
+                            <div class="table_59 sectiontableentry2">
+                                <span class="col_01">  </span>
+                            <span class="col_01">
+                                <a  class="category" style="text-decoration: none"><img src="../assets/address.png" alt="picture for subcategory" height="48" width="48"></a>&nbsp;
+                                            </span>
+                            <span class="col_02">
+                                <a href="https://flipestate-chandananc.c9.io/categories/3"> Apartment</a>
+                                
+                            </span>
+                            <span class="col_03"> 1 </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="basictable table_46"> </div>
+        </form>
+        <div style="text-align: center;"><a style="font-size: 10px;" href="http://ordasoft.com">Powered by OrdaSoft!</a></div>
+        	<div style="clear:both;height:0px"></div>
+        </div>
+    </div>
+</div>

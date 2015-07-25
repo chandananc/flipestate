@@ -1,0 +1,74 @@
+<br>
+<br>
+
+    
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+    
+   
+    <% @lists.each do |list| %>
+    <p>
+
+  <%= list.address %>
+</p>
+
+<iframe
+  width="1150"
+  height="300"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=
+  AIzaSyCDUjG6U31VxADJBuliYaemivyDZYUK2Xw
+    &q=Space+Needle,Seattle+WA" allowfullscreen>
+</iframe>
+
+<br>
+<br>
+
+<div id="ShowOrderBy">
+        <form method="POST"  name="orderForm">
+            <input type="hidden" id="order_direction" name="order_direction" value="asc">
+              <span class="glyphicon glyphicon-sort-by-alphabet" aria-hidden="true">  </span>         
+                Order By <select>
+                            <option value="date">  Date </option>
+                            <option value="price"> Price</option>
+                            <option value="htitle" selected="selected"> Title</option>
+                        </select>
+        </form>
+</div>
+
+
+
+ <div class="row">
+        <div class="col-md-3">
+        <div class="thumbnail">
+         
+            <div class="caption">
+            <b>  <%= list.name %>  </b> <br>
+               <span class="glyphicon glyphicon-resize-full" aria-hidden="true"> <%= list.sqft %> </b></span> &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp;    &nbsp; &nbsp;  <span class=" glyphicon glyphicon-home"> <%= list.rooms %> </span>   <br> <br>
+                
+                 <span class="glyphicon glyphicon-calendar" aria-hidden="true"> 
+                  
+                   </span> Built Year : <br>
+                  
+                   <%= list.built_year %> 
+                   <br> <br>
+                  <button class: logbutton>
+                    <%= list.cost %> USD 
+                 
+             
+                <%= link_to 'View Listing', list, class: "btn btn-link" %></td>
+              
+        <td><%= link_to 'Edit', edit_list_path(list) %></td>
+        <td><%= link_to 'Destroy', list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                
+            </div>
+          </div>
+        </div>
+    <% end %>
+    </div>
+  </div>
+ </button>
+<%= link_to 'New Listing', new_list_path %>
